@@ -1,0 +1,29 @@
+#main-screen-controls > div{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+  z-index: 199;
+}
+#main-screen-controls__button-toggle-parallax {
+  top: 20%;
+  right: 20px;
+  width: 280px;
+}
+#main-screen-controls__button-stop-video {
+  top: 85%;
+  left: 20px;
+}
+#main-screen-controls__button-go-to-events {
+  top: 85%;
+  right: 20px;
+}
+#main-screen-controls__button-christmas-mode {
+  top: 70%;
+  right: 20px;
+  opacity: 0.2;
+}
+@media screen and (max-width: 700px) {
+  #main-screen-controls__button-toggle-parallax {
+    display: none;
+  }
+}

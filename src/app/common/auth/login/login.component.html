@@ -1,0 +1,44 @@
+<div class="signuplogin__container">
+
+  <!--<form class="form-signup" [formGroup]="signupForm">-->
+    <form class="form-login" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+  
+      <div class="signuplogin__label signuplogin__header">Login</div>
+  
+      <div class="signuplogin__form-grid">
+        <div class="signuplogin__label">TO DO: Login with Facebook</div>
+        <div class="signuplogin__label">TO DO: Login with Twitter</div>
+      </div><!--end_of-signuplogin__form-grid-->
+  
+      <div class="signuplogin__form-group">
+        <label for="inputUsername" class="signuplogin__label">Your name</label>
+        <input id="inputUsername" name="inputUsername" [formControlName]="'userName'" class="signuplogin__form-control" type="text" placeholder = "Your name" required autofocus>
+      </div>
+    
+      <div class="signuplogin__form-group">
+        <label for="inputPassword" class="signuplogin__label">Password</label>
+        <input id="inputPassword" name="inputPassword" [formControlName]="'password'" class="signuplogin__form-control" type="password" placeholder = "Password" required>
+      </div>
+  
+      <input id="inputResponsestatus" name="inputResponsestatus" [formControlName]="'responseStatus'" class="signuplogin__form-control" type="text">
+      <div>form status: {{ loginForm.status }}</div>
+  
+      <div class="signuplogin__buttons">
+        <span id="signuplogin__button-backtohome" class="button-b-border" (click)="onBacktohome()">
+          back to home page
+        </span>
+    <!--<span id="signuplogin__button-signup" class="button-a-filled" (click)="onSignupSubmit()">-->
+        <span id="signuplogin__button-login">
+          <button type="submit" class="button-a-filled" >Login!</button>
+        </span>
+      </div>
+      
+      <div class="signuplogin__buttons">
+        <span id="signuplogin__button-logout" class="button-b-border" (click)="onLogoutSubmit()">
+         ----------- ----------- logout ----------- -----------
+        </span>
+      </div>
+      
+      <div></div>
+    </form>
+  </div>><!--end_of-signuplogin__container-->

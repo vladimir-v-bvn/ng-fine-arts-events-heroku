@@ -1,0 +1,15 @@
+
+<article id="top-events">
+  <header id="top-events__header">Our top events</header>
+  <section id="top-events__block">
+    <div *ngFor="let topEvent of topEvents">
+      <a href="eventdescription.html?EVENT_ID={{topEvent.eventId}}">
+        <div class="topevent" style="background-image: url('../../../assets/imgevents/{{topEvent.eventId}}/1.jpg');">
+          <div class="topevent-name">{{topEvent.eventName}}</div>
+          <div class="topevent-location">{{topEvent.locationName}}</div>
+          <div class="topevent-date">{{topEvent.eventDate | slice:0:10 | date: 'MMMM, dd'}}</div>
+        </div>
+      </a>
+    </div>
+  </section>
+</article>

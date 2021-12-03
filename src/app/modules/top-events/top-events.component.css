@@ -1,0 +1,54 @@
+#top-events {
+  width: 95%;
+  margin: 30px;
+}
+#top-events__header {
+  font-size: 300%;
+  text-align: center;
+  margin: 20px;
+}
+#top-events__block {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+.topevent {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  height: 275px;
+  width: 275px;
+  text-align: center;
+  background-image: url("data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCAABAAEDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAAP/EABQQAQAAAAAAAAAAAAAAAAAAAAD/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AAAW/9k=");
+  background-size: cover;
+  background-color: gray;
+  background-blend-mode: multiply;
+}
+.topevent > div {
+  padding: 1px;
+  color: white;
+}
+.topevent:hover {
+  transform: scale(1.01);
+}
+.topevent-name {
+  height: 200px;
+  font-size: 150%;
+  padding: 10px 5px 2px!important;
+}
+.topevent-location, .topevent-date {
+  font-size: 120%;
+}
+@media(max-width: 1050px){
+  #top-events__block {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 750px){
+  #top-events__block {
+    grid-template-columns: 1fr;
+  }
+}

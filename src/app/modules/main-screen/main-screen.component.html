@@ -1,0 +1,16 @@
+
+<app-preloader></app-preloader>
+
+<app-main-screen-video *ngIf="toggleVideoParallax"></app-main-screen-video>
+<app-main-screen-parallax *ngIf="!toggleVideoParallax"></app-main-screen-parallax>
+
+<app-main-screen-main-event
+  [toggleVideoParallax]="toggleVideoParallax"
+  [processAnimation]="processAnimation">
+</app-main-screen-main-event>
+<app-main-screen-controls
+  [toggleVideoParallax]="toggleVideoParallax"
+  [processAnimation]="processAnimation"
+  (toggleVideoParallaxChange)="onToggleVideoParallaxChange($event)"
+  (stopVideo)="onStopVideo($event)">
+</app-main-screen-controls>

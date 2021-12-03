@@ -1,0 +1,146 @@
+#mainheader {
+  position: fixed;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  z-index: 99;
+}
+#mainheader > div {
+  display: inline-block;
+  margin: 5px;
+}
+#mainnav {
+  float: right;
+}
+#mainnav__menu {
+  list-style-type: none;
+  display: inline-block;
+}
+#mainnav__menu > div {
+  float: left;
+  margin: 7px 20px 2px 5px;
+}
+
+#mainnav__cart {
+  width: 31px;
+  height: 21px;
+  background: url('../../../assets/img/cart-small.png') no-repeat center;
+  position: relative;
+}
+#mainnav__carttext {
+  top: -1px;
+  left: 14px;
+  font-size: 85%;
+  color: #ef3652;
+  position: absolute;
+}
+#mainnav__cartsum {
+  display: none;
+  position: absolute;
+  top: 3px;
+  left: 45px;
+}
+
+#mainnav__hello {
+  display: none;
+}
+#mainnav__islogged {
+  display: none;
+}
+#mainnav__hamburger {
+  float: right;
+  margin: 5px;
+  padding: 12px;
+  display: none;
+  position: relative;
+}
+#mainnav__hamburgerspan {
+  position: absolute;
+  margin: 5px;
+  top: 7px;
+  left: -2px;
+  width: 20px;
+  height: 2px;
+  background-color: #ef3652;
+}
+#mainnav__hamburgerspan:before,
+#mainnav__hamburgerspan:after {
+  position: absolute;
+  content:"";
+  width: 20px;
+  height: 2px;
+  background-color: #ef3652;
+}
+#mainnav__hamburgerspan:before {
+  transform: translateY(-5px);
+}
+#mainnav__hamburgerspan:after {
+  transform: translateY(5px);
+}
+.mainnav__hamburgerspan-open {
+  height: 0px !important;
+}
+.mainnav__hamburgerspan-open::before {
+  transform: rotate(45deg) !important;
+  transition: all 1s;
+}
+.mainnav__hamburgerspan-open::after {
+  transform: rotate(-45deg) !important;
+  transition: all 1s;
+}
+.opacity-transition-to-100 {
+  opacity: .5 !important;
+  transition: opacity 3s !important;
+}
+
+@media screen and (max-width: 700px) {
+  #mainnav__menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 200px;
+    top: 46px;
+    right: 0px;
+    display: block;
+    opacity: 0;
+  }
+  #mainnav__menu > div {
+    float: none;
+  }
+  #mainnav__hamburger {
+    display: inline-block;
+  }
+  #mainnav__cartsum {
+    display: inline-block;
+  }
+}
+
+#mainnav__blink {
+  color: #ef3652;
+  animation: blur .95s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 12px #fff;
+  cursor: default;
+}
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+    0px 0px 10px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 50px #fff,
+    0px 0px 50px #fff,
+    0px 0px 50px #7B96B8,
+    0px 0px 150px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px -10px 100px #7B96B8,
+    0px -10px 100px #7B96B8;
+  }
+}

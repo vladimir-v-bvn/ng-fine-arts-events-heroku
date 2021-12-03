@@ -1,0 +1,21 @@
+<!-- -->
+<div id="main-screen-controls">
+  <div id="main-screen-controls__button-toggle-parallax"
+       (click)="onToggleVideoParallaxChange()"
+       [ngClass]="{'button-b-border': true, 'onload-animation': true, 'topright': true, 'process-animation': processAnimation}">
+    {{toggleVideoParallaxText}}
+  </div>
+  <div id="main-screen-controls__button-stop-video"
+       (click)="onStopVideo()"
+       [ngClass]="{'button-b-border': true, 'onload-animation': true, 'bottomleft': true, 'process-animation': processAnimation}">
+    stop video
+  </div>
+  <div id="main-screen-controls__button-go-to-events"
+       [ngClass]="{'button-b-border': true, 'onload-animation': true, 'bottomright': true, 'process-animation': processAnimation}">
+    <a href="#list-of-events-found">&#8595;&nbsp;Go to events</a>
+  </div>
+  <div id="main-screen-controls__button-christmas-mode"
+       [ngClass]="{'button-b-border': true, 'onload-animation': true, 'centerright': true, 'process-animation': processAnimation}">
+    TODO: christmas-mode
+  </div>
+</div>

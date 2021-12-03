@@ -1,0 +1,49 @@
+<div class="signuplogin__container">
+
+<!--<form class="form-signup" [formGroup]="signupForm">-->
+  <form class="form-signup" [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
+
+    <div class="signuplogin__label signuplogin__header">Sign Up</div>
+
+    <div class="signuplogin__form-grid">
+      <div class="signuplogin__label">TO DO: Sign up with Facebook</div>
+      <div class="signuplogin__label">TO DO: Sign up with Twitter</div>
+    </div><!--end_of-signuplogin__form-grid-->
+
+    <div class="signuplogin__form-group">
+      <label for="inputUsername" class="signuplogin__label">Your name</label>
+      <input id="inputUsername" name="inputUsername" [formControlName]="'userName'" class="signuplogin__form-control" type="text" placeholder = "Your name" required autofocus>
+    </div>
+
+    <div class="signuplogin__form-group">
+      <label for="inputEmail" class="signuplogin__label">Email</label>
+      <input id="inputEmail" name="inputEmail" [formControlName]="'email'" class="signuplogin__form-control" type="email" placeholder = "Email" required>
+      <span *ngIf="signupForm.get('email').valid && signupForm.get('email').touched">Please provide a valid e-mail.</span>
+    </div>
+
+    <div class="signuplogin__form-group">
+      <label for="inputPassword" class="signuplogin__label">Password</label>
+      <input id="inputPassword" name="inputPassword" [formControlName]="'password'" class="signuplogin__form-control" type="password" placeholder = "Password" required>
+    </div>
+
+    <div class="signuplogin__form-group">
+      <label for="inputConfirmpassword" class="signuplogin__label">Conform password</label>
+      <input id="inputConfirmpassword" name="inputConfirmpassword" [formControlName]="'confirmPassword'" class="signuplogin__form-control" type="password" placeholder = "Confirm password" required>
+    </div>
+
+    <input id="inputResponsestatus" name="inputResponsestatus" [formControlName]="'responseStatus'" class="signuplogin__form-control" type="text">
+    <div>form status: {{ signupForm.status }}</div>
+
+    <div class="signuplogin__buttons">
+      <span id="signuplogin__button-backtohome" class="button-b-border" (click)="onBacktohome()">
+        back to home page
+      </span>
+  <!--<span id="signuplogin__button-signup" class="button-a-filled" (click)="onSignupSubmit()">-->
+      <span id="signuplogin__button-signup">
+        <button type="submit" class="button-a-filled" >Sign up!</button>
+      </span>
+    </div>
+    
+    <div></div>
+  </form>
+</div>><!--end_of-signuplogin__container-->

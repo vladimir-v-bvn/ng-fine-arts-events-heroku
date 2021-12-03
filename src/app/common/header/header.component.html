@@ -1,0 +1,31 @@
+<div id="mainheader">
+  <div id="mainlogo"><a routerLink="/"><img src="/assets/img/FineArtsEvents-logo.png" alt="FineArtsEventsNG"></a></div>
+  <div id="mainnav">
+    <div id="mainnav__menu" [ngClass] = "{'visible-block': isVisible, 'opacity-transition-to-100': isVisible}">
+      <div id="mainnav__planselection"><a [routerLink]="['/addyourevent']"><span id="mainnav__blink">+&nbsp;</span>Add Your Event</a></div>
+      <div id="mainnav__cart">
+        <span id="mainnav__carttext">
+        </span><span id="mainnav__cartsum">Total:</span>
+      </div>
+      <div id="mainnav__signup"><a [routerLink]="['/signup']">Sign Up</a></div>
+      <div id="mainnav__login"><a [routerLink]="['/login']">Log In</a></div>
+      <div id="mainnav__hello"></div>
+      <div id="mainnav__islogged"></div>
+    </div>
+    <div id="mainnav__hamburger" (click)="onClickHamburger()">
+      <span id="mainnav__hamburgerspan" [ngClass]="{'mainnav__hamburgerspan-open': hamburgerspanOpen}"></span>
+    </div>
+
+  </div>
+</div>
+
+<!--
+<div id="popup-background" class="modalbox"></div>
+<div id="loginsignup"></div>
+<div id="cart"></div>
+-->
+
+<!--
+<script src="js/mainheader.js"></script>
+-->
+

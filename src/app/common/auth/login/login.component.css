@@ -1,0 +1,44 @@
+form {
+  position : relative;
+  width  : 540px;
+  height : 498px;
+  margin : 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+/*background : #FFF url(formbackground.jpg);*/
+}
+.signuplogin__form-group{
+  margin : 20px 0px;
+}
+form label{
+  display: inline-block;
+  width : 150px;
+}
+form button{
+  border-style: none;
+}
+
+
+.signuplogin__buttons{
+  margin : 50px 30px 0px 0px;
+}
+
+.signuplogin__buttons span{
+  margin : 20px 20px 20px 20px;
+  cursor: pointer;
+}
+
+#inputResponsestatus{
+  display: inline-block;
+  width : 350px;
+  border-style: none;
+
+}
+.signuplogin__form-grid {
+  display  : grid;
+  margin : 20px 1px 1px 1px;
+  grid-gap : 1px;
+  grid-template-columns : repeat(2, 1fr);
+  grid-template-rows    : 1em 1em 1em 1em;
+
+}

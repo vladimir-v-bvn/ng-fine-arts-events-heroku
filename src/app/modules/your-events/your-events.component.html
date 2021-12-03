@@ -1,0 +1,72 @@
+<article id="your-events">
+  <header id="your-events__header">Find your event</header>
+  <section id="your-events__block">
+    <form [formGroup]= "yourEventsForm">
+      <section id="your-events__formblock">
+        <div class="your-events__form-control">
+          <label for="eventsname">Event name</label><br>
+          <input type=text list=eventsnames name="eventsname" id="eventsname" size="45" placeholder="your event name">
+          <datalist id=eventsnames></datalist>
+        </div>
+        <div class="your-events__form-control">
+          <label for="city">City</label><br>
+          <input type="text" list=citiesnames name="city" id="city" size="14" placeholder="city">
+          <datalist id=citiesnames></datalist>
+        </div>
+        <div class="your-events__form-control">
+          <label for="date">Date</label><br>
+          <input type="date" name="date" id="date" size="15" placeholder="date">
+        </div>
+        <!--    <div class="your-events__form-control"><input type="image" id="your-events__form-button" src="../../../assets/img/findyourevent.png" alt="Find your event!"></div>-->
+        <div class="your-events__form-control">
+          <button type="submit" id="your-events__form-submit"><img src="../../../assets/img/findyourevent.png" alt="Find your event!"></button>
+        </div>
+      </section><!--"your-events__formblock"-->
+      <div class="your-events__form-control" id="response-status"></div>
+    </form>
+
+    <div class=lef-controls>
+      <div id="lef-pagenumber">0</div>
+      <div id="fye-ename"></div>
+      <div id="fye-city"></div>
+      <div id="fye-edate"></div>
+    </div>
+
+    <section id="your-events__grid" data-page=0>
+
+      <div class="yourevent" *ngFor="let yourEvent of yourEvents">
+        <a href="eventdescription.html?EVENT_ID={{yourEvent.eventName}}">
+          <div class="yourevent-img" style="background-image: url('../../../assets/imgevents/{{yourEvent.eventId}}/1.jpg');"></div>
+        </a>
+        <div class="topevent-name">{{yourEvent.eventName}}</div>
+        <div class="topevent-location">{{yourEvent.locationName}}</div>
+        <div class="topevent-date">{{yourEvent.eventDate | slice:0:10 | date: 'MMMM, dd'}}</div>
+      </div>
+
+
+
+      <div class="yourevent-block">
+        <div>
+          <div class="yourevent-date">U</div>
+          <div class="yourevent-map" data-lat=P data-lng=F></div>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <a href="eventdescription.html?EVENT_ID=Q"><div class="tef-name">Y</div></a>
+        </div>
+        <div>
+          <div class="tte-location">Z, W</div>
+          <div class="tte-buytickets main-button main-button-c">
+            <a href="eventdescription.html?EVENT_ID=Q">' + 'Buy tickets</a>
+          </div>
+        </div></div>
+
+
+
+
+    </section><!--"your-events__grid"-->
+    <div id="mapcontainer"><div id="map"></div></div>
+
+  </section><!--"your-events__block"-->
+</article>
+

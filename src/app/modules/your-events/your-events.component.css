@@ -1,0 +1,17 @@
+#your-events {
+  width: 95%;
+  margin: 30px;
+}
+#your-events__header {
+  font-size: 300%;
+  text-align: center;
+  margin: 20px;
+}
+#your-events__formblock {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 18% 19% 200px;
+  padding: 10px 5px;
+  border-style: solid;
+}

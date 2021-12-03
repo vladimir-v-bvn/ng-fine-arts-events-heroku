@@ -1,0 +1,30 @@
+
+<div id="main-event-container" [ngClass]="{'onload-animation': true, 'topleft': true, 'process-animation': processAnimation}">
+  <div class="main-event-container-switcher" *ngIf="toggleVideoParallax">
+    <div class="main-event-container__event-name">The Sleeping Beauty</div>
+    <div class="main-event-container__event-location">Bolshoi Theather, Moscow</div>
+    <div class="main-event-container__event-date">December 22-29</div>
+    <div class="main-event-container__event-cast">Svetlana Zakharova, Maria Alexandrova, Denis Rodkin</div>
+    <div class="main-event-container__event-description">
+      Journey with The Bolshoi Ballet to an enchanted world of princesses, fairy godmothers and magical spells in this landmark production of Petipa's classic ballet, to glorious music by Tchaikovsky.
+    </div>
+    <br>
+    <div class="main-event-container__buy-button" class="button-a-filled">
+      Buy Tickets <!-- <a href="eventdescription.html?EVENT_ID=100000000020">Buy Tickets</a> TODO-->
+    </div>
+  </div>
+  <div class="main-event-container-switcher" *ngIf="!toggleVideoParallax">
+    <div class="main-event-container__event-name">Samson and Dalila</div>
+    <div class="main-event-container__event-location">Metropolitan Opera, New York</div>
+    <div class="main-event-container__event-date">December 25-31</div>
+    <div class="main-event-container__event-cast">Elina Garanca, Roberto Alagna</div>
+    <div class="main-event-container__event-description">
+      A towering biblical epic, Saint-Saëns’s operatic take on the story of Samson and Delilah has many of the hallmarks of grand opera—show-stopping vocal displays, thrilling choruses, and an engrossing plot set against a sweeping, pseudo-historical backdrop.
+    </div>
+    <br>
+    <div class="main-event-container__buy-button" class="button-a-filled">
+      Buy Tickets <!-- <a href="eventdescription.html?EVENT_ID=100000000020">Buy Tickets</a> TODO-->
+    </div>
+  </div>
+</div>
+

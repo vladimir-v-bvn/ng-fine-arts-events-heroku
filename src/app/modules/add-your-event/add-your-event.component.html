@@ -1,0 +1,48 @@
+<div class="AddYourEvent__container">
+
+  <!--<form class="form-addYourEvent" [formGroup]="addYourEventForm">-->
+  <form class="form-addYourEvent" [formGroup]="addYourEventForm" (ngSubmit)="onAddYourEventSubmit()">
+  
+    <div class="addYourEvent__label addYourEvent__header">Add Your Event</div>
+  
+    <div class="addYourEvent__form-grid">
+    </div><!--end_of-addYourEvent__form-grid-->
+
+    <div *ngIf = "!authService.isAuthenticated()"><!--login__switch-->
+      You must be logged to add events. Please login.
+    </div><!--end_of-login__switch-->
+
+    <div *ngIf = "authService.isAuthenticated()"><!--login__switch-->
+
+      <div class="addYourEvent__form-group">
+        <label for="inputEventName" class="addYourEvent__label">Event Name</label>
+        <input id="inputEventName" name="inputEventName" [formControlName]="'eventName'" class="addYourEvent__form-control" type="text" placeholder = "Event Name" required autofocus>
+      </div>
+      
+      <div class="addYourEvent__form-group">
+        <label for="inputEventDate" class="addYourEvent__label">Event Date</label>
+        <input id="inputEventDate" name="inputEventDate" [formControlName]="'eventDate'" class="addYourEvent__form-control" type="date" placeholder = "Event Date" required>
+      </div>
+      
+      <div class="addYourEvent__form-group">
+        <label for="inputLocationId" class="addYourEvent__label">Location Id</label>
+        <input id="inputLocationId" name="inputLocationId" [formControlName]="'locationId'" class="addYourEvent__form-control" type="text" placeholder = "Location Id 12345678" required>
+      </div>
+  
+      <input id="inputResponsestatus" name="inputResponsestatus" [formControlName]="'responseStatus'" class="addYourEvent__form-control" type="text">
+      <div>form status: {{ addYourEventForm.status }}</div>
+  
+      <div class="addYourEvent__buttons">
+        <span id="addYourEvent__button-backtohome" class="button-b-border" (click)="onBacktohome()">
+          back to home page
+        </span>
+        <!--<span id="addYourEvent__button-signup" class="button-a-filled" (click)="onAddYourEventSubmit()">-->
+        <span id="addYourEvent__button">
+          <button type="submit" class="button-c-filled" >Add Your Event!</button>
+        </span>
+      </div>
+      
+    </div><!--end_of-login__switch-->
+  <div></div>
+  </form>
+</div>><!--end_of-addYourEvent__container-->

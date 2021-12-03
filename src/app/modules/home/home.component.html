@@ -1,0 +1,10 @@
+
+
+<app-header *ngIf="loadSections"></app-header>
+
+<app-main-screen (loadSections)="onLoadSections($event)"></app-main-screen>
+
+<app-top-events *ngIf="loadSections"></app-top-events>
+
+<app-your-events *ngIf="loadSections"></app-your-events>
+

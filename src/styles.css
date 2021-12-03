@@ -1,0 +1,161 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+}
+* {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 15px;
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
+.visible-none {
+  display: none !important;
+}
+.visible-block {
+  display: block !important;
+}
+.visible-inline-block {
+  display: inline-block !important;
+}
+
+/*------------ standart buttons*/
+.button-a-filled {
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+  border-radius: 25px;
+  background-color: #ef3652;
+}
+.button-b-border {
+  text-align: center;
+  padding: 10px;
+  width: 210px;
+  border-radius: 25px;
+  border-color: #ef3652;
+  border-style: solid;
+  border-width: 3px;
+}
+.button-c-filled {
+  text-align: center;
+  padding: 10px;
+  width: 180px;
+  border-radius: 25px;
+  background-color: #ef3652;
+}
+.main-button-c {
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #ef3652;
+}
+.main-button-d {
+  text-align: center;
+  padding: 10px;
+  width: 210px;
+  border-radius: 25px;
+  border-color: #ef3652;
+  border-style: solid;
+  border-width: 3px;
+}
+.main-button-e {
+  text-align: center;
+  padding: 10px;
+  width: 180px;
+  border-radius: 4px;
+  background-color: #ef3652;
+}
+/*------------ end of standart buttons*/
+
+/*------------ onloadanimation*/
+.onload-animation {
+  opacity: 0;
+}
+.onload-animation.topleft {
+  transform-origin: top left;
+}
+.onload-animation.topright {
+  transform-origin: top right;
+}
+.onload-animation.bottomleft {
+  transform-origin: bottom left;
+}
+.onload-animation.bottomright {
+  transform-origin: bottom right;
+}
+.onload-animation.centerright {
+  transform-origin: right;
+}
+.process-animation {
+  animation: controls-on-load 750ms ease-in forwards
+}
+@keyframes controls-on-load {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  90% {
+    opacity: 0.9;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*------------ end of onloadanimation*/
+
+/*------------ preloader*/
+#preLoader, #preLoader:before, #preLoader:after{
+  border: 2px solid transparent;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+#preLoader:before, #preLoader:after{
+  content: "";
+}
+#preLoader{
+  width: 75px;
+  height: 75px;
+  border-top-color: #ef3652;
+  animation: spin-counter-clockwise 0.75s infinite linear;
+}
+#preLoader:before{
+  width: 70px;
+  height: 70px;
+  border-top-color: #ffff00;
+  animation: spin-clockwise 0.5s infinite linear;
+}
+#preLoader:after{
+  width: 80px;
+  height: 80px;
+  border-top-color: #002040;
+  animation: spin-clockwise 1s infinite linear;
+}
+@keyframes spin-clockwise{
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes spin-counter-clockwise{
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+/*------------ end of preloader*/
